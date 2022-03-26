@@ -7,7 +7,7 @@ resource "random_string" "suffix" {
 
 resource "azurerm_resource_group" "rg" {
   name     = "${var.LAB}-${random_string.suffix.result}"
-  location = "EastAsia"
+  location = "AustraliaEast"
   tags = {
     email = "${var.EMAIL}"
   }
