@@ -46,7 +46,8 @@ resource "azurerm_network_security_group" "secgroup" {
     access                     = "Allow"
     direction                  = "Inbound"
     destination_port_range     = 3389
-    protocol                   = "*" # rdp uses both
+    protocol                   = "tcp" # rdp uses both
+    # protocol                   = "*" # rdp uses both
     source_port_range          = "*"
     source_address_prefix      = "Internet"
     destination_address_prefix = "*"
